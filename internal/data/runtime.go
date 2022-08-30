@@ -13,7 +13,7 @@ const minsSuffix = "mins"
 
 var ErrInvalidRuntimeFormat = errors.New("invalid runtime format")
 
-func (r Runtime) MarshallJSON() ([]byte, error) {
+func (r Runtime) MarshalJSON() ([]byte, error) {
 	value := fmt.Sprintf("%d mins", r)
 
 	quoted := strconv.Quote(value)
