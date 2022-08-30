@@ -20,7 +20,7 @@ func (app *application) writeJSON(
 	data envelope,
 	headers http.Header,
 ) error {
-	json, err := json.Marshal(data)
+	json, err := json.MarshalIndent(data, "", "\t")
 	if err != nil {
 		return err
 	}
